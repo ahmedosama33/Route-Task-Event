@@ -3,7 +3,7 @@ import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './App.css';
 import axios from 'axios';
-import { data as localData } from './api'; // Importing local data from api.js
+import { data as localData } from './api'; 
 
 function App() {
     const [useLocalData, setUseLocalData] = useState(false); // Flag to toggle between local data and API data
@@ -93,7 +93,7 @@ function App() {
                     value={filter.transactionAmount}
                     onChange={handleFilterChange}
                 />
-                <button onClick={() => setUseLocalData(!useLocalData)}>
+                <button onClick={() => setUseLocalData(!useLocalData)} className="btn">
                     Toggle Data Source: {useLocalData ? 'Local' : 'API'}
                 </button>
             </div>
